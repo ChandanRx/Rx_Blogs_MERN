@@ -10,7 +10,7 @@ const cors = require('cors')
 
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: 'https://rx-blogs.vercel.app/', 
   credentials: true 
 }));
 
