@@ -1,4 +1,3 @@
-import { useAuth } from "../context/AuthContext"; 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -27,7 +26,9 @@ const Login = () => {
     if (token && user) {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
+
       window.dispatchEvent(new Event("userChanged"));
+
       navigate("/");
     } else {
       setError("Login failed: Missing token or user data");
