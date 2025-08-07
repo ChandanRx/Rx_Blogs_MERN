@@ -10,7 +10,7 @@ const cors = require('cors')
 
 
 app.use(cors({
-  origin: 'https://rx-blogs.vercel.app/', 
+  origin: 'https://rx-blogs.vercel.app', 
   credentials: true 
 }));
 
