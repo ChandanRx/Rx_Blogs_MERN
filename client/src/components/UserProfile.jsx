@@ -12,12 +12,12 @@ const UserProfile = () => {
     const fetchBlogs = async () => {
       const token = localStorage.getItem("token");
       try {
-        const userRes = await axios.get("http://localhost:7000/api/blogs/profile", {
+        const userRes = await axios.get("https://rx-blogs-mern.onrender.com/api/blogs/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(userRes.data);
 
-        const res = await axios.get("http://localhost:7000/api/addblog/myblogs", {
+        const res = await axios.get("https://rx-blogs-mern.onrender.com/api/addblog/myblogs", {
           headers: { Authorization: `Bearer ${token}` },
           withCredentials: true,
         });
@@ -41,7 +41,7 @@ const UserProfile = () => {
       try {
         const token = localStorage.getItem("token"); 
 
-        await axios.delete(`http://localhost:7000/api/addblog/${id}`, {
+        await axios.delete(`https://rx-blogs-mern.onrender.com/api/addblog/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
