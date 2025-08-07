@@ -42,7 +42,7 @@ const BlogDetails = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:7000/api/comments/delete/${commentId}`, {
+      await axios.delete(`https://rx-blogs-mern.onrender.com/api/comments/delete/${commentId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -59,7 +59,7 @@ const BlogDetails = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        `http://localhost:7000/api/comments/edit/${id}`,
+        `https://rx-blogs-mern.onrender.com/api/comments/edit/${id}`,
         { text },
         {
           headers: {
@@ -83,7 +83,7 @@ const BlogDetails = () => {
 
   const fetchBlog = async () => {
     try {
-      const response = await axios.get(`http://localhost:7000/api/addblog/${id}`);
+      const response = await axios.get(`https://rx-blogs-mern.onrender.com/api/addblog/${id}`);
       setBlog(response.data.blog);
     } catch (err) {
       console.error("Error fetching blog:", err);
@@ -93,7 +93,7 @@ const BlogDetails = () => {
 
   const fetchComments = async () => {
     try {
-      const response = await axios.get(`http://localhost:7000/api/comments/${id}`);
+      const response = await axios.get(`https://rx-blogs-mern.onrender.com/api/comments/${id}`);
       setAllComments(response.data);
       console.log(response);
 
@@ -113,7 +113,7 @@ const BlogDetails = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        `http://localhost:7000/api/comments/${id}`,
+        `https://rx-blogs-mern.onrender.com/api/comments/${id}`,
         { text: comment.trim() },
         {
           headers: {
