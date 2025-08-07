@@ -1,4 +1,4 @@
-require('@dotenvx/dotenvx').config()
+require('dotenv').config()
 const express = require('express')
 const dbconnect = require('./config/dbconnect')
 const app = express()
