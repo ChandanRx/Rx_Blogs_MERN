@@ -46,7 +46,7 @@ const BlogForm = () => {
       let res;
       if (editMode) {
         res = await axios.patch(
-          `http://localhost:7000/api/addblog/${blogToEdit._id}`,
+          `https://rx-blogs-mern.onrender.com/api/addblog/${blogToEdit._id}`,
           formData,
           {
             headers: {
@@ -57,7 +57,7 @@ const BlogForm = () => {
         );
       } else {
         res = await axios.post(
-          'http://localhost:7000/api/addblog/create',
+          'https://rx-blogs-mern.onrender.com/api/addblog/create',
           formData,
           {
             headers: {
