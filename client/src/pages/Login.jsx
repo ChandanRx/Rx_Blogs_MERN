@@ -16,7 +16,7 @@ const Login = () => {
   setError(""); 
 
   try {
-    const res = await axios.post("http://localhost:7000/api/blogs/login", {
+    const res = await axios.post("https://rx-blogs-mern.onrender.com/api/blogs/login", {
       email,
       password,
     });
