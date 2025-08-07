@@ -59,7 +59,7 @@ const Home = () => {
 
 
       <motion.div
-        className="flex flex-wrap gap-6 mb-6 justify-start"
+        className="flex flex-wrap gap-6 mb-6 justify-center md:justify-start"
         variants={container}
         initial="hidden"
         animate="show"
