@@ -51,7 +51,7 @@ const Register = () => {
 
 
     try {
-      const res = await fetch("http://localhost:7000/api/blogs/register", {
+      const res = await fetch("https://rx-blogs-mern.onrender.com/api/blogs/register", {
         method: "POST",
         body: data,
       });
