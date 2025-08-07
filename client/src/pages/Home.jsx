@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("http://localhost:7000/api/addblog");
+        const res = await axios.get("https://rx-blogs-mern.onrender.com/api/addblog");
         setBlogs(res.data.blogs || res.data);
       } catch (err) {
         console.error(err);
