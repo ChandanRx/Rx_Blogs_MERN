@@ -25,8 +25,10 @@ const Login = () => {
     const { token, user } = res.data;
 
     if (token && user) {
-     login({ userData: user, token });
-     navigate("/");
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+      window.dispatchEvent(new Event("userChanged"));
+      navigate("/");
     } else {
       setError("Login failed: Missing token or user data");
     }
