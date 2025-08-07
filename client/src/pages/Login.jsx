@@ -9,7 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
+ 
   const handleLogin = async (e) => {
   e.preventDefault();
   setLoading(true);
@@ -49,7 +49,7 @@ const Login = () => {
   initial={{ opacity: 0, scale: 0.95, y: 30 }}
   animate={{ opacity: 1, scale: 1, y: 0 }}
   transition={{ duration: 0.6, ease: [0.25, 0.8, 0.25, 1] }}
-  className="shadow-[4px_4px_0px_#00000020] rounded-none bg-gradient-to-br from-[#fff] to-[#fff] dark:from-[#1e1e1e] dark:to-[#2c2c2c] p-8 w-full max-w-md space-y-5 dark:shadow-[2px_2px_0px_#FFD194]"
+  className="shadow-[4px_4px_0px_#00000020] rounded-none bg-gradient-to-br from-[#fff] to-[#fff] dark:from-[#1e1e1e] dark:to-[#2c2c2c] p-8 w-full max-w-md space-y-5 px-4 md:px-0 dark:shadow-[2px_2px_0px_#FFD194]"
 >
   <motion.h2
     initial={{ opacity: 0, y: -20 }}
